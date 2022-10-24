@@ -1,0 +1,32 @@
+body{
+    background: #bb4e03b8;
+}
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.form-style{
+    border: solid 1px;
+    border-radius: 50px;
+    width: 50%;
+    background: #135646d1;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    width: 70%;
+    margin-left: 13px;
+}
+@media only screen and (max-width: 600px) {
+    .form-style{
+        border: solid 1px;
+        border-radius: 0px;
+        width: 100%;
+    }
+    [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+        cursor: pointer;
+        width: 90%;
+        margin-left: 10px;
+    }
+  }
