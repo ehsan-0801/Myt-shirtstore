@@ -1,32 +1,65 @@
+@import url('../fonts/RobotoCondensed-Regular.ttf');
 body{
-    background: #bb4e03b8;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: small;
+}
+.form-control{
+    border: 2px solid #1a55dfd1;
 }
 .form-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    margin-top: 10%;
 }
 .form-style{
-    border: solid 1px;
-    border-radius: 50px;
-    width: 50%;
-    background: #135646d1;
+    outline: solid 2px #1a55dfd1;
+    width: 35%;
+    box-shadow: 0px 0px 15px 2px powderblue;
 }
+
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
-    width: 70%;
-    margin-left: 13px;
+    width: 100%;
+    margin-left: 0px;
 }
 @media only screen and (max-width: 600px) {
     .form-style{
         border: solid 1px;
-        border-radius: 0px;
         width: 100%;
     }
     [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
         cursor: pointer;
         width: 90%;
         margin-left: 10px;
+    }
+  }
+
+  #side_nav{
+    background: #1a55dfd1;
+    min-width: 200px;
+    max-width: 200px;
+    
+  }
+  .content-box{
+    min-height: 100vh;
+    width: 100%;
+  }
+  .content.ms-5.mt-5.content-open{
+    display: block;
+  }
+  .content.ms-5.mt-5.content-hidden {
+    display: none;
+ }
+  .sidebar li.active{
+    background: gray;
+    border-radius: 8px;
+  }
+  @media(max-width: 767px){
+    #side_nav{
+        margin-left: -250px;
+        position: absolute;
+        min-height: 100vh;
+        z-index: 1;
+    }
+    #side_nav.active{
+        margin-left: 0;
     }
   }

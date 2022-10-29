@@ -13,28 +13,49 @@
     <body>
         <!-- admin login form -->
         <div class="container form-container">
-            <form action="" class="form-style container p-5">
+            <form action="./validation/login_check.php" onsubmit="return validation()" method="POST"
+                class="form-style container p-5">
                 <h3 class="text-dark text-center mb-3">Admin Login</h3>
-                <div class="mb-3 row">
-                    <label for="email" class="col-sm-3 col-form-label">Email/Number:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="email" value=""
-                            placeholder="email or phone number" />
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label">Password:</label>
-                    <div class="col-sm-9">
-                        <input type="password" class="form-control" id="password" value="" placeholder="password" />
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <div class="col-sm-3"></div>
-                    <button class="btn btn-primary col-sm-9" type="button">Login</button>
+
+                <input type="text" class="form-control mb-1
+                " id="email_or_phone" name="email_or_phone" value="" placeholder="email or phone number" />
+                <label id="msg1" class="text-danger mb-2"></label>
+                <input type="password" class="form-control mb-1
+                " id="password" name="password" value="" placeholder="password" />
+                <label id="msg2" class="text-danger mb-2"></label>
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Login</button>
                 </div>
             </form>
         </div>
         <script src="../js/bootstrap.min.js"></script>
+        <script>
+        function validation() {
+            var email_or_phone = document.getElementById('email_or_phone').value;
+            var password = document.getElementById('password').value
+            if (email_or_phone.length == "" && password.length == "") {
+                document.getElementById('msg1').innerHTML = ""
+                document.getElementById('msg2').innerHTML = ""
+                document.getElementById('msg1').innerHTML = "**User Name is empty"
+                document.getElementById('msg2').innerHTML = "**Password field is empty"
+                return false;
+            } else {
+                if (email_or_phone.length == "") {
+                    document.getElementById('msg1').innerHTML = ""
+                    document.getElementById('msg2').innerHTML = ""
+                    document.getElementById('msg1').innerHTML = "**User Name is empty"
+                    return false;
+                }
+                if (password.length == "") {
+                    document.getElementById('msg1').innerHTML = ""
+                    document.getElementById('msg2').innerHTML = ""
+                    document.getElementById('msg2').innerHTML = "**Password field is empty"
+                    return false;
+                }
+            }
+        }
+        </script>
     </body>
 
 </html>
