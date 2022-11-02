@@ -6,13 +6,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin Dashboard</title>
-        <script src="../js/jquery-3.6.1.min.js"></script>
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="../css/fontawesome-free-6.2.0-web/css/all.css">
+        <script src="../../js/jquery-3.6.1.min.js"></script>
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="stylesheet" href="../../css/fontawesome-free-6.2.0-web/css/all.css">
     </head>
 
     <body>
+        <nav class="navbar bg-secondary">
+            <div class="container">
+                <h3 class="mx-auto">
+                    <?php    
+                echo $_SESSION['username'];
+                ?>
+                </h3>
+                <a href="../../logout.php"><i class="fa-solid fa-right-from-bracket text-dark"></i></a>
+            </div>
+        </nav>
         <div class="main-dashboard d-flex">
             <div class="sidebar" id="side_nav">
                 <div class="header-box px-2 pt-3 pb-4">
@@ -77,7 +87,7 @@
 
         </div>
 
-        <script src=" ../js/bootstrap.min.js">
+        <script src="../../js/bootstrap.min.js">
         </script>
 
         <script>

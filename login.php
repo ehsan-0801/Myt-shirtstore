@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Myt-shirtstore</title>
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
 
     <body>
@@ -15,7 +15,7 @@
         <div class="container form-container">
             <form action="./validation/login_check.php" onsubmit="return validation()" method="POST"
                 class="form-style container p-5">
-                <h3 class="text-dark text-center mb-3">Admin Login</h3>
+                <h3 class="text-dark text-center mb-3">SIGN IN</h3>
 
                 <input type="text" class="form-control mb-1
                 " id="email_or_phone" name="email_or_phone" value="" placeholder="email or phone number" />
@@ -37,14 +37,14 @@
             if (email_or_phone.length == "" && password.length == "") {
                 document.getElementById('msg1').innerHTML = ""
                 document.getElementById('msg2').innerHTML = ""
-                document.getElementById('msg1').innerHTML = "**User Name is empty"
+                document.getElementById('msg1').innerHTML = "**email or phone number is empty"
                 document.getElementById('msg2').innerHTML = "**Password field is empty"
                 return false;
             } else {
                 if (email_or_phone.length == "") {
                     document.getElementById('msg1').innerHTML = ""
                     document.getElementById('msg2').innerHTML = ""
-                    document.getElementById('msg1').innerHTML = "**User Name is empty"
+                    document.getElementById('msg1').innerHTML = "**email or phone number is empty"
                     return false;
                 }
                 if (password.length == "") {
