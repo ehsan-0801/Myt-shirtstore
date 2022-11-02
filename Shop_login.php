@@ -18,7 +18,8 @@
                 <h3 class="text-dark text-center mb-3">SHOP LOG IN</h3>
 
                 <input type="text" class="form-control mb-1
-                " id="email_or_phone" name="email_or_phone" value="" placeholder="email or phone number" />
+                " id="email_or_phone" name="email_or_phone" value=""
+                    placeholder="email or phone number or Shop Name" />
                 <label id="msg1" class="text-danger mb-2"></label>
                 <input type="password" class="form-control mb-1
                 " id="password" name="password" value="" placeholder="password" />

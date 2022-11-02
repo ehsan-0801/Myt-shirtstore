@@ -3,14 +3,14 @@
     include('../Header.php'); 
     session_start();
     // var_dump($_REQUEST); 
-    $email_or_phone = $_POST['email_or_phone'];  
+    $email_or_phone_or_shopname = strtolower($_POST['email_or_phone']);  
     $password = $_POST['password'];  
       
         //to prevent from mysqli injection  
         // $email_or_phone = stripcslashes($stripcslashes);  
         // $password = stripcslashes($password);  
       
-        $sql = "SELECT * FROM shop WHERE ( email = '$email_or_phone' OR phone = '$email_or_phone' ) AND (password = '$password')";  
+        $sql = "SELECT * FROM shop WHERE ( email = '$email_or_phone_or_shopname' OR phone = '$email_or_phone_or_shopname' OR shopname = '$email_or_phone_or_shopname') AND (password = '$password')";  
         $result = mysqli_query($con, $sql);
         
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  

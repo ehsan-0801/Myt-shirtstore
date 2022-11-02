@@ -24,7 +24,7 @@
                             <a class="nav-link text-white fs-bold" href="./CreateShop.php">Create Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fs-bold" href="#">Login</a>
+                            <a class="nav-link text-white fs-bold" href="./Shop_login.php">Login</a>
                         </li>
                     </ul>
                 </div>
